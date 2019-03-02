@@ -5,7 +5,7 @@ use App\Entity\User;
 use App\Form\UserType;
 use App\Form\UserPassType;
 use App\Repository\UserRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,7 +14,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 /**
  * @Route("/admin/user")
  */
-class UserController extends Controller
+class UserController extends AbstractController
 {
 
     /**
