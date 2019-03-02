@@ -14,10 +14,7 @@ Encore
     // .addEntry('js/app', './assets/js/app.js')
     // .addStyleEntry('css/app', './assets/css/app.scss')
 	.addEntry('app', './assets/js/app.js')
-	.createSharedEntry('vendor', [
-        'jquery',
-        'bootstrap-sass',
-    ])
+	.createSharedEntry('vendor', './webpack.shared_entry.js')
 
     // uncomment if you use Sass/SCSS files
     .enableSassLoader(function(sassOptions) {}, {
