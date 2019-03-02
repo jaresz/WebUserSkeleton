@@ -23,5 +23,4 @@ yarn-error.log
 /.web-server-pid
 ###< symfony/web-server-bundle ###
 config/parameters.yml
-bin/phpunit
-bin/console
+
