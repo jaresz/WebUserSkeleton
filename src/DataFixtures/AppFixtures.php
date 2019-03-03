@@ -74,7 +74,7 @@ class AppFixtures extends Fixture implements ContainerAwareInterface
 		
 		
 		$user = new User();
-		$user->setEmail('robot@macrobond.com');
+		$user->setEmail('robot@listy.internetowe.pl');
 		$user->setUsername('robot');
 		$user->addRolesAssigned($roleUser);
 		$user->addRolesAssigned($roleAdmin);
