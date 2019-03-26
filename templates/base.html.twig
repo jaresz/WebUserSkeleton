@@ -27,6 +27,8 @@
 
 					Logged as <span
 						class="logeduser {% if is_granted('ROLE_PREVIOUS_ADMIN') %}impersonate{% endif %}">{{ app.user.username }}</span>
+					<a
+							class="btn-default btn-primary" href="{{ path('self_user_change_pass') }}">change password</a>
 					{% if is_granted('ROLE_ADMIN') %}<span class="badge">admin</span>{% endif %}
 					<a
 							class="dropdown-item" href="{{ path('logout') }}" title="Logout">
