@@ -27,9 +27,17 @@ html, body {
 	border: 2px solid $loginFormBorderColor;
 }
 
-.session_info {
+.top_row {
 	background-color: $mbf_lightgray;
+}
+
+.session_info {
 	text-align: right;
+}
+
+.logeduser {
+	font-weight: bold;
+	text-shadow: 2px 2px 1px #ff8;
 }
 
 /* $brand-primary: darken(#ff0000, 10%);

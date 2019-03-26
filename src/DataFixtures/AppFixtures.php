@@ -37,15 +37,7 @@ class AppFixtures extends Fixture implements ContainerAwareInterface
 		$manager->persist($roleUser);
 		
 		$role1 = new Role();
-		$role1->setName('ROLE_CANDIDATE');	
-		$manager->persist($role1);
-		
-		$role1 = new Role();
-		$role1->setName('ROLE_EMPLOYEE');	
-		$manager->persist($role1);
-		
-		$role1 = new Role();
-		$role1->setName('ROLE_HR');	
+		$role1->setName('ROLE_SUPPLY');	
 		$manager->persist($role1);
 		
 		$role1 = new Role();
@@ -71,23 +63,7 @@ class AppFixtures extends Fixture implements ContainerAwareInterface
 		$user->setPassword($encoded);
 		
 		$manager->persist($user);
-		
-		
-		$user = new User();
-		$user->setEmail('robot@listy.internetowe.pl');
-		$user->setUsername('robot');
-		$user->addRolesAssigned($roleUser);
-		$user->addRolesAssigned($roleAdmin);
-		
-		// $encoder = new UserPasswordEncoderInterface();
-		$plainPassword = $this->container->getParameter('app.admin_pass_initial');
-		$encoded = $this->encoder->encodePassword($user, $plainPassword);
-		
-		// $hash = $this->getContainer()->get('security.password_encoder')->encodePassword($user, 'user password');
-		$user->setPassword($encoded);
-		
-		$manager->persist($user);
-		
+				
 		$manager->flush();
 	}
 }
