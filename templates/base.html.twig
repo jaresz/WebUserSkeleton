@@ -2,68 +2,62 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
+    <title>{% block title %}WebUserSkeleton{% endblock %}</title>
     <link rel="stylesheet" href="{{ asset('build/app.css') }}">
 
 </head>
 <body style="background: #f1f1f0;">
 
-<div class="top_row">
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">WebUserSkeleton</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-
-    <div class="row" style="text-align: left;">
-        <div class="col-md-4">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
             {% if is_granted('ROLE_ADMIN') %}
-
-
-                <ul class="nav nav-pills">
-                    <li role="presentation" class="active"><a href="{{ path('user_index') }}">user list</a></li>
-                    <li role="presentation"><a href="{{ path('user_new') }}">add user</a></li>
-                    <li role="presentation"><a href="#">Messages</a></li>
-                </ul>
+                <li class="nav-item active">
+                    <a href="{{ path('user_index') }}" class="nav-link">Users <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('user_new') }}" class="nav-link">Add user</a>
+                </li>
             {% endif %}
-        </div>
-        <div class="col-md-4">
 
-        </div>
-        <div class="col-md-4 ">
-            <div class="session_info">
 
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav my-3 my-lg-0">
 
             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-
-                <ul class="nav nav-pills">
-
-                    <li role="presentation" class="dropdown" style="float: right;">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                            {{ app.user.username }} {% if is_granted('ROLE_ADMIN') %}<span class="badge">admin</span>{% endif %} <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a
-                                    class="btn-default btn-primary" href="{{ path('self_user_change_pass') }}">Change password</a>
-                            </li>
-
-                            <li><a
-                                    class="dropdown-item" href="{{ path('logout') }}" title="Logout">
-                                Logout
-                            </a></li>
-
-                        </ul>
-                    </li>
-
-                </ul>
-
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ app.user.username }} {% if is_granted('ROLE_ADMIN') %}<span
+                                class="badge badge-secondary">admin</span>{% endif %}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ path('self_user_change_pass') }}">Change password</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ path('logout') }}" title="Logout">Logout</a>
+                    </div>
+                </li>
             {% else %}
-                Not logged in. <a
-                    class="dropdown-item" href="{{ path('admin_login') }}">log in</a>
+                <li class="nav-item">
+                    <a href="{{ path('admin_login') }}" class="nav-link">log in</a>
+                </li>
             {% endif %}
-            </div>
-        </div>
+
+        </ul>
     </div>
+</nav>
 
 
-</div>
 <div class="main_content">
     {% block body %}
     {% endblock %}
