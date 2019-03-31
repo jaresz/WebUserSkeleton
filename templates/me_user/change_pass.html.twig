@@ -3,9 +3,9 @@
 {% block title %}Change password{% endblock %}
 
 {% block body %}
-    <h1>Change password </h1>
+    <h1>{{ "ChangePasswordTitle"|trans }}</h1>
 
-    {{ include('me_user/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('me_user/_form.html.twig', {'button_label': 'UpdateButtonTitle'|trans}) }}
 
   
 {% endblock %}

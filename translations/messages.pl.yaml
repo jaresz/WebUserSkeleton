@@ -1,0 +1,17 @@
+WebUserSkeletonTitle: Szkielet z obsługą użytkowników
+UsersLinkTitle: Lista użytkowników
+AddUserLinkTitle: Dodaj użytkownika
+ChangePasswordTitle: Zmiana hasła
+ChangePasswordLinkTitle: Zmień hasło
+LogoutLinkTitle: Wyloguj
+Password: Hasło
+New password: Nowe hasło
+New password2: Powtórzenie nowego hasła
+Username: Login
+Email: Email
+Is active: Aktywne
+Roles assigned: Przypisane role
+BackToListLinkTitle: Powrót do listy
+SaveButtonTitle: Zapisz
+UpdateButtonTitle: Aktualizuj
+CreateNewUserTitle: Tworzenie nowego użytkownika
