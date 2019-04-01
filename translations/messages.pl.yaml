@@ -15,3 +15,7 @@ BackToListLinkTitle: Powrót do listy
 SaveButtonTitle: Zapisz
 UpdateButtonTitle: Aktualizuj
 CreateNewUserTitle: Tworzenie nowego użytkownika
+
+RestrictedAreaTitle: Strefa ograniczonego dostępu
+PleaseSignInPrompt: Zaloguj się
+SignInButtonTitle: Zaloguj

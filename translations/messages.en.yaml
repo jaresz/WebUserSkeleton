@@ -15,3 +15,7 @@ BackToListLinkTitle: Back to list
 SaveButtonTitle: Save
 UpdateButtonTitle: Update
 CreateNewUserTitle: Creating new user
+
+RestrictedAreaTitle: Restricted area
+PleaseSignInPrompt: Please sign in
+SignInButtonTitle: Sign in

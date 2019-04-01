@@ -6,8 +6,7 @@
 
 <div class="formSigninContainer">
 	<div class="formSigninInContainer">
-		<div style="font-size: 28px; text-align: center;">Restricted
-			area</div>
+		<div style="font-size: 28px; text-align: center;">{{ "RestrictedAreaTitle"|trans }}</div>
 		{% if error %}
 		<div class="loginError animated bounceInDown"> <p>
 		        {{ error.messageKey|trans(error.messageData, 'security') }}
@@ -16,15 +15,15 @@
 
 		<form action="{{ path('admin_login') }}" method="post" class="form-signin">
 			<div class="form-signin-icon"></div>
-			<h2 class="form-signin-heading">Please sign in</h2>
+			<h2 class="form-signin-heading">{{ "PleaseSignInPrompt"|trans }}</h2>
 
 			<label for="inputEmail" class="sr-only">Username</label> <input name="_username" type="text" id="inputEmail" class="form-control"
-				placeholder="username" required autofocus data-toggle="tooltip" data-placement="top" title="This is NOT a domain username"> <label
+				placeholder="username" required autofocus data-toggle="tooltip" data-placement="top" title="{{ "Username"|trans }}"> <label
 				for="inputPassword" class="sr-only">Password</label> <input name="_password" type="password" id="inputPassword" class="form-control"
 				placeholder="Password" required> {# If you want to control the URL the user is redirected to on success (more details below) <input
 			type="hidden" name="_target_path" value="/account" /> #}
 
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">{{ "SignInButtonTitle"|trans }}</button>
 		</form>
 	</div>
 </div>

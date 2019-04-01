@@ -4,7 +4,7 @@ imports:
     - { resource: parameters.yml }
     
 parameters:
-    locale: 'pl'
+    locale: 'en'
 
 services:
     # default configuration for services in *this* file
